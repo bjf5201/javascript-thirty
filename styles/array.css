@@ -1,0 +1,14 @@
+:root {
+  --base: #c6c6c6;
+  --highlight: #f0b18f;
+  --text: #0e0e0e;
+  --padding: 10px;
+}
+
+body {
+  text-align: left;
+  font-weight: 100;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  padding: 10px 30px 30px 70px;
+}
