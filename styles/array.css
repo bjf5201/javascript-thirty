@@ -1,11 +1,11 @@
 :root {
   --light-gray: hsl(0, 0%, 78%);
-  --highlight: #f0b18f;
+  --peach: #f0b18f;
   --grey-green: #aebba9;
   --salmon: #b97457;
   --deep-orange: #c6834f;
-  --straw: #dcc895;
-  --ballerina: #e5d3c9;
+  --gold: #dcc895;
+  --cream: #e5d3c9;
   --text: #0e0e0e;
   --padding: 10px;
   --margin: 10px;
