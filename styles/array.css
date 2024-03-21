@@ -1,8 +1,14 @@
 :root {
-  --base: #c6c6c6;
+  --light-gray: hsl(0, 0%, 78%);
   --highlight: #f0b18f;
+  --grey-green: #aebba9;
+  --salmon: #b97457;
+  --deep-orange: #c6834f;
+  --straw: #dcc895;
+  --ballerina: #e5d3c9;
   --text: #0e0e0e;
   --padding: 10px;
+  --margin: 10px;
 }
 
 body {
@@ -11,4 +17,23 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
   padding: 10px 30px 30px 70px;
+}
+
+code, samp {
+  font-family: Consolas, 'Courier New', Courier, monospace;
+  color: var(--text);
+  font-size: 105%;
+}
+
+.answer {
+  border: 1px solid black;
+  border-color: var(--salmon);
+  padding: 5px 5px 15px 10px;
+  margin: var(--margin);
+}
+
+.input, .output {
+  background-color: var(--light-gray);
+  padding: var(--padding);
+  margin: var(--margin);
 }
