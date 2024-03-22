@@ -1,0 +1,19 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.title {
+  color: tomato;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
