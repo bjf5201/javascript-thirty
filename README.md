@@ -2,11 +2,11 @@
 
 ## My take on a Wes Bos JS tutorial
 
-This is my take on one of Wes Bos' ["JavaScript30"](https://javascript30.com/) tutorials.  I made a few simple changes in order to give the project my own flair - including rearranging the organization of the files and the code within them, making the HTML semantic with the inclusion of HTML5 tags, and adding version control with meaningful commits to the project.
+This is my take on of Wes Bos' ["JavaScript30"](https://javascript30.com/) tutorials.  I made a few simple changes in order to give the projects my own flair - including rearranging the organization of the files and the code within them, making the HTML semantic with the inclusion of HTML5 tags, and adding version control with meaningful commits to the project.
 
 ### Organized Code and Files
 
-The first thing I did when I copied this project into my local development environment was split the code up into three different files: index.html, style.css, and app.js.  Again, I understand that for the purpose of Bos's tutorial he wasn't trying to make things overcomplicated, but the perfectionist in me couldn't bear to see all the JavaScript and CSS jumbled together in one file.  Seperating CSS, HTML, and JavaScript brings numerous benefits, from organization, readability, and maintainability to reusability and consistency.  Even further than that - I believe it's still essential that we keep CSS and HTML separate from each other. Although with modern frameworks like React mixing HTML and JavaScript with CSS more and more these days, some devs are questioning if this principle is out of touch. I would argue that CSS, at least, still [needs to be separated from HTML and JavaScript](https://keithjgrant.com/posts/2015/05/against-css-in-js/).  Decoupling the style from the logic of your web applications is essential to being efficient. If you are following CSS best practices, updating your HTML shouldn't cause you to have to go in and change your stylesheet every time.  That's because your CSS and HTML should be decoupled. For more information, check out [Scalable Modular Architecture CSS](http://smacss.com/book/), [Object Oriented CSS](https://github.com/stubbornella/oocss/wiki), or [Block Element Modifier](http://bem.github.com/bem-method/pages/beginning/beginning.en.html).  
+The first thing I did when I copied this project into my local development environment was split the code up into three different files: index.html, style.css, and app.js.  Again, I understand that for the purpose of Bos's tutorials he wasn't trying to make things overcomplicated, but the perfectionist in me couldn't bear to see all the JavaScript and CSS jumbled together in one file.  Seperating CSS, HTML, and JavaScript brings numerous benefits, from organization, readability, and maintainability to reusability and consistency.  Even further than that - I believe it's still essential that we keep CSS and HTML separate from each other. Although with modern frameworks like React mixing HTML and JavaScript with CSS more and more these days, some devs are questioning if this principle is out of touch. I would argue that CSS, at least, still [needs to be separated from HTML and JavaScript](https://keithjgrant.com/posts/2015/05/against-css-in-js/).  Decoupling the style from the logic of your web applications is essential to being efficient. If you are following CSS best practices, updating your HTML shouldn't cause you to have to go in and change your stylesheet every time.  That's because your CSS and HTML should be decoupled. For more information, check out [Scalable Modular Architecture CSS](http://smacss.com/book/), [Object Oriented CSS](https://github.com/stubbornella/oocss/wiki), or [Block Element Modifier](http://bem.github.com/bem-method/pages/beginning/beginning.en.html).  
 
 ### Semantic HTML
 
@@ -19,21 +19,25 @@ Finally, the last thing I added was meaningful version control in the form of [C
 My commits must follow the following format:
 
 ```text
-<type>(optional scope): <description>
 
-[optional body]
-
-[optional footer(s)]
+<type>(optional scope): <title (50 char max)>
+<BLANK LINE>
+<body (70 char max)>
+<BLANK LINE>
+<Commit author signature>
+<footer (include issue resolved if applicable)>
 
 ```
 
 For example:
 
 ```text
+
 doc(README): Include installation instructions
 
 Added package installation instructions for the user.
 
 Signed-off-by: <contact@bethanyfannin.com>
+Resolves: #4
 
 ```
