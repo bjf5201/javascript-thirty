@@ -1,5 +1,23 @@
+/**
+ * Represents an array of inventors.
+ * @typedef {Object} Inventor
+ * @property {string} first - The first name of the inventor.
+ * @property {string} last - The last name of the inventor.
+ * @property {number} year - The birth year of the inventor.
+ * @property {number} passed - The year the inventor passed away.
+ */
+
+/**
+ * Represents an array of people.
+ * @typedef {string[]} People
+ */
+
 const answerOne = document.querySelector('.code1');
 
+/**
+ * An array of inventors.
+ * @type {Inventor[]}
+ */
 const inventors = [
   { first: "Albert", last: "Einstein", year: 1879, passed: 1955 }, // 76 6
   { first: "Isaac", last: "Newton", year: 1643, passed: 1727 }, // 84 10
@@ -15,7 +33,10 @@ const inventors = [
   { first: "Hanna", last: "Hammarström", year: 1829, passed: 1909 }, // 80 8
 ];
 
-
+/**
+ * An array of people.
+ * @type {People}
+ */
 const people = [
   "Bernhard, Sandra",
   "Bethea, Erin",
@@ -60,8 +81,11 @@ const people = [
   "Biondo, Frank",
 ];
 
-// Array.prototype.filter()
-// 1. Filter the list of inventors for those who were born in the 1500's
+/**
+ * Filter the list of inventors for those who were born in the 1500's.
+ * @param {Inventor[]} inventors - The array of inventors.
+ * @returns {Inventor[]} - The filtered array of inventors.
+ */
 const fifteen = inventors.filter((inventor) => inventor.year > 1500 && inventor.year < 1599);
 
 console.log(fifteen);
@@ -76,28 +100,40 @@ const generatedHtml = Object.keys(fifteen).reduce(
 
 answerOne.innerHTML = `[` + generatedHtml + `]`;
 
-// Array.prototype.map()
-// 2. Give us an array of the inventors first and last names
+/**
+ * Get an array of the inventors' full names.
+ * @param {Inventor[]} inventors - The array of inventors.
+ * @returns {string[]} - The array of full names.
+ */
 const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
 
-// Array.prototype.sort()
-// 3. Sort the inventors by birthdate, oldest to youngest
+/**
+ * Sort the inventors by birthdate, oldest to youngest.
+ * @param {Inventor[]} inventors - The array of inventors.
+ * @returns {Inventor[]} - The sorted array of inventors.
+ */
 const sortedByBirth = inventors.sort((a, b) => (a.year > b.year) ? 1 : (a.year < b.year) ? -1 : 0);
 
-// Array.prototype.reduce()
-// 4. How many years did all the inventors live all together?
+/**
+ * Calculate the total number of years all the inventors lived.
+ * @param {Inventor[]} inventors - The array of inventors.
+ * @returns {number} - The total number of years.
+ */
 const sum = inventors.reduce(
   (accumulator, currentValue) => accumulator + (currentValue.passed - currentValue.year),
   0,
 );
 
-// 5. Sort the inventors by years lived
+/**
+ * Sort the inventors by years lived.
+ * @param {Inventor[]} inventors - The array of inventors.
+ * @returns {Inventor[]} - The sorted array of inventors.
+ */
 const yearsLived = inventors.sort((a, b) => {
   const firstOne = parseInt(a.passed - a.year);
   const nextOne = parseInt(b.passed - b.year);
   return nextOne > firstOne ? -1 : 1;
 });
-
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
